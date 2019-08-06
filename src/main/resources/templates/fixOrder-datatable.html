@@ -1,0 +1,487 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Form Input Group</title>
+		<link rel="shortcut icon" type="image/x-icon" href="Vertical/favicon.ico">
+		<!-- google font -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+		<link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="/assets/css/ionicons.css" rel="stylesheet" type="text/css">
+		<link href="/assets/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+		<link href="/assets/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+		<!--fullcalendar-->
+		<link href="/assets/css/fullcalendar.css" rel='stylesheet' />
+		<link href="/assets/css/style.css" rel="stylesheet">
+		<link href="/assets/css/responsive.css" rel="stylesheet">
+		<style type="text/css" rel="stylesheet">
+			.finished {
+				width: 30%;
+				position: absolute;
+				z-index: 999;
+				margin-top: 10px;
+				margin-left: 60%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<!-- header -->
+			<header class="main-header">
+				<div class="container_header">
+					<div class="logo d-flex align-items-center">
+						<a href="#"> <strong class="logo_icon"> <img src="/assets/images/small-logo.png" alt=""> </strong> <span class="logo-default"> <img src="/assets/images/logo2.png" alt=""> </span> </a>
+						<div class="icon_menu full_menu">
+							<a href="#" class="menu-toggler sidebar-toggler"></a>
+						</div>
+					</div>
+					<div class="right_detail">
+						<div class="row d-flex align-items-center min-h pos-md-r">
+							<div class="col-xl-5 col-3 search_col ">
+								<div class="top_function">
+
+									<div class="search">
+										<a id="toggle_res_search" data-toggle="collapse" data-target="#search_form" class="res-only-view collapsed" href="javascript:void(0);"
+										aria-expanded="false"> <i class=" icon-magnifier"></i> </a>
+										<form id="search_form" role="search" class="search-form collapse" action="#">
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="Search...">
+												<button type="button" class="btn" data-target="#search_form" data-toggle="collapse" aria-label="Close">
+													<i class="ion-android-search"></i>
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-7 col-9 d-flex justify-content-end">
+								<div class="right_bar_top d-flex align-items-center">
+
+									<!-- notification_Start -->
+									<div class="dropdown dropdown-notification">
+										<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="false"> <i class="fa fa-bell-o"></i> <span class="badge_coun"> 6 </span> </a>
+										<ul class="dropdown-menu scroll_auto height_fixed" aria-labelledby="dropdownMenu1">
+											<li class="bigger">
+												<h3><span class="bold">Notifications</span></h3>
+												<span class="notification-label">New 6</span>
+											</li>
+											<li>
+												<ul class="dropdown-menu-list">
+													<li>
+														<a href="javascript:;"> <span class="time">just now</span> <span class="details"> <span class="notification-icon deepPink-bgcolor"> <i class="fa fa-check"></i> </span> Congratulations!. </span> </a>
+													</li>
+													<li>
+														<a href="javascript:;"> <span class="time">3 mins</span> <span class="details"> <span class="notification-icon purple-bgcolor"> <i class="fa fa-user o"></i> </span> <b>John Micle </b>is now following you. </span> </a>
+													</li>
+													<li>
+														<a href="javascript:;"> <span class="time">7 mins</span> <span class="details"> <span class="notification-icon blue-bgcolor"> <i class="fa fa-comments-o"></i> </span> <b>Sneha Jogi </b>sent you a message. </span> </a>
+													</li>
+													<li>
+														<a href="javascript:;"> <span class="time">12 mins</span> <span class="details"> <span class="notification-icon pink"> <i class="fa fa-heart"></i> </span> <b>Ravi Patel </b>like your photo. </span> </a>
+													</li>
+													<li>
+														<a href="javascript:;"> <span class="time">15 mins</span> <span class="details"> <span class="notification-icon yellow"> <i class="fa fa-warning"></i> </span> Warning! </span> </a>
+													</li>
+													<li>
+														<a href="javascript:;"> <span class="time">10 hrs</span> <span class="details"> <span class="notification-icon red"> <i class="fa fa-times"></i> </span> Application error. </span> </a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+									<!-- notification_End -->
+									<!-- DropDown_Inbox -->
+									<div class="dropdown dropdown-inbox">
+										<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> <i class="fa fa-envelope-o"></i> <span class="badge_coun"> 2 </span> </a>
+										<ul class="dropdown-menu scroll_auto height_fixed" aria-labelledby="dropdownMenu1">
+											<li class="bigger">
+												<h3><span class="bold">Messages</span></h3>
+												<span class="notification-label">New 2</span>
+											</li>
+											<li>
+												<ul class="dropdown-menu-list">
+													<li>
+														<a href="#"> <span class="photo"> <img src="/assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
+													</li>
+													<li>
+														<a href="#"> <span class="photo"> <img src="/assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
+													</li>
+													<li>
+														<a href="#"> <span class="photo"> <img src="/assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
+													</li>
+													<li>
+														<a href="#"> <span class="photo"> <img src="/assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
+													</li>
+													<li>
+														<a href="#"> <span class="photo"> <img src="/assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
+													</li>
+													<li>
+														<a href="#"> <span class="photo"> <img src="/assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+									<!--DropDown_Inbox_End -->
+									<!-- Dropdown_User -->
+									<div class="dropdown dropdown-user">
+										<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="true"> <img class="img-circle pro_pic" src="/assets/images/about-1.jpg" alt=""> </a>
+										<ul class="dropdown-menu dropdown-menu-default">
+											<li>
+												<a href="#"> <i class="icon-user"></i> Profile </a>
+											</li>
+											<li>
+												<a href="#"> <i class="icon-settings"></i> Settings </a>
+											</li>
+											<li>
+												<a href="#"> <i class="icon-directions"></i> Help </a>
+											</li>
+											<li class="divider"></li>
+											<li>
+												<a href="lock_screen.html"> <i class="icon-lock"></i> Lock </a>
+											</li>
+											<li>
+												<a href="#"> <i class="icon-logout"></i> Log Out </a>
+											</li>
+										</ul>
+									</div>
+									<!-- Dropdown_User_End -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</header>
+			<!-- header_End -->
+			<!-- Content_right -->
+			<div class="container_full">
+
+				<div class="side_bar scroll_auto">
+	                <div class="user-panel">
+						<div class="user_image">
+							<img src="/assets/images/user1.png" class="img-circle mCS_img_loaded" alt="User Image">
+						</div>
+						<div class="info">
+							<p id="userAccount" th:text="${Email}"></p>
+							<a href="#"> <i class="fa fa-circle text-success"></i> Online</a>
+						</div>
+					</div>
+
+					<ul id="dc_accordion" class="sidebar-menu tree">
+						<li class="menu_sub">
+							<a href="#"> <i class="fa fa-graduation-cap"></i> <span>教务管理</span> <span class="
+								arrow"></span>
+							</a>
+							<ul class="down_menu">
+								<li>
+									<a href="/consumableOrder/doView">耗材申报单管理</a>
+								</li>
+								<li>
+									<a href="echart.html">人员信息管理</a>
+								</li>
+								<li>
+									<a href="/fixOrder/doView">基础设施报修</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu_sub">
+							<a href="/teacher/doView"> <i class="fa fa-user-secret"></i> <span>教师管理</span></a>
+						</li>
+
+						<li class="menu_sub">
+							<a href="/student/doView"> <i class="fa fa-users"></i> <span>学员管理</span></a>
+						</li>
+
+						<li class="menu_sub">
+							<a href="/lesson/doView"> <i class="fa fa-calendar"></i> <span>课程管理</span></a>
+						</li>
+
+						<li class="menu_sub">
+							<a href="#"> <i class="fa fa-cny"></i> <span>财务管理</span> <span class="arrow"></span> </a>
+							<ul class="down_menu">
+								<li>
+									<a href="flot-chart.html">订单管理</a>
+								</li>
+								<li>
+									<a href="echart.html">财务报表</a>
+								</li>
+								<li>
+									<a href="morris-chart.html">数据报表</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<!--main contents start-->
+				<main class="content_wrapper">
+					<!--page title start-->
+					<div class="page-heading">
+						<div class="container-fluid">
+							<div class="row d-flex align-items-center">
+								<div class="col-md-6">
+									<div class="page-breadcrumb">
+										<h1>基础设施报修</h1>
+										<button id="addOrder" type="button" class="btn btn-danger" style="margin-bottom: 10px;" data-toggle="modal" data-target="#addFixOrderModal">
+											<i class="icon-note pr-2"></i> 报修
+										</button>
+									</div>
+								</div>
+								<div class="col-md-6 justify-content-md-end d-md-flex">
+									<div class="breadcrumb_nav">
+										<ol class="breadcrumb">
+											<li>
+												<i class="fa fa-home"></i>
+												<a class="parent-item" href="/index">主页</a>
+												<i class="fa fa-angle-right"></i>
+											</li>
+											<li class="active">
+												基础设施报修
+											</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--page title end-->
+
+					<div class="container-fluid">
+						<!-- state start-->
+						<div class="row">
+							<div class=" col-sm-6">
+								<div class="card card-shadow" style="margin-bottom: 30px;" th:each="m,mStat:${fixOrderList}" th:if="${mStat.odd}">
+									<img th:if="${m.status} eq '0'" src="/assets/images/finished.jpg" class="img-circle mCS_img_loaded finished">
+									<div class="card-header form-inline">
+										<div class="card-title col-sm-9" th:text="'订单编号：'+${m.orderid}"></div>
+										<div class="col-sm-3">
+											<button th:if="${m.status} eq '1'" type="button" class="btn btn-warning handleFixOrder">处理</button>
+											<input th:value="${m.uuid}" type="text" class="required form-control" style="display: none;">
+										</div>
+									</div>
+									<div class="card-body">
+										<div class="form-group">
+											<label>申报人员工号</label>
+											<input th:value="${m.teacher.teacherid}" name="teacherId" type="text" class="required form-control" placeholder="请输入人员工号" autocomplete="off">
+										</div>
+										<div class="form-group">
+											<label>工单标题</label>
+											<input th:value="${m.theme}" name="theme" type="text" class="required form-control" placeholder="请输入工单标题" autocomplete="off">
+										</div>
+										<div class="form-group">
+											<label>工单详情</label>
+											<textarea th:text="${m.detail}" class="form-control" name="detail" rows="3"></textarea>
+										</div>
+										<div class="form-group">
+											<label>费用金额</label>
+											<div class="input-group" style="width: 40%;">
+												<span class="input-group-addon">￥</span>
+												<input th:value="${m.amount}" name="amount" type="text" class="form-control" aria-label="Text input with radio button">
+												<span class="input-group-addon">0.00</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+                            <div class=" col-sm-6">
+                                <div class="card card-shadow" style="margin-bottom: 30px;" th:each="m,mStat:${fixOrderList}" th:if="${mStat.even}">
+									<img th:if="${m.status} eq '0'" src="/assets/images/finished.jpg" class="img-circle mCS_img_loaded finished">
+                                    <div class="card-header form-inline">
+                                        <div class="card-title col-sm-9" th:text="'订单编号：'+${m.orderid}"></div>
+										<div class="col-sm-3">
+											<button th:if="${m.status} eq '1'" type="button" class="btn btn-warning handleFixOrder">处理</button>
+											<input th:value="${m.uuid}" type="text" class="required form-control" style="display: none;">
+										</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label>申报人员工号</label>
+                                            <input th:value="${m.teacher.teacherid}" name="teacherId" type="text" class="required form-control" placeholder="请输入人员工号" autocomplete="off">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>工单标题</label>
+                                            <input th:value="${m.theme}" name="theme" type="text" class="required form-control" placeholder="请输入工单标题" autocomplete="off">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>工单详情</label>
+                                            <textarea th:text="${m.detail}" class="form-control" name="detail" rows="3"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>费用金额</label>
+											<div class="input-group" style="width: 40%;">
+												<span class="input-group-addon">￥</span>
+												<input th:value="${m.amount}" name="amount" type="text" class="form-control" aria-label="Text input with radio button">
+												<span class="input-group-addon">0.00</span>
+											</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+					</div>
+
+					<!-- add student Modal start -->
+					<div class="modal fade" id="addFixOrderModal" tabindex="-1" role="dialog" aria-labelledby="addFixOrderModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="addFixOrderModalLabel">报修申请</h5>
+									<button id="closeButton" type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form th:action="@{/fixOrder/addOrUpdate}" method="post" id="addFixOrderForm">
+										<input id="fixOrderUuid" name="fixOrderUuid" type="text" style="display: none;">
+										<input id="orderId" name="orderId" type="text" style="display: none;">
+										<input id="teacherId" name="teacherId" type="text" style="display: none;">
+										<div class="form-group">
+											<label>工单标题</label>
+											<input id="theme" name="theme" type="text" class="required form-control" placeholder="请输入标题" autocomplete="off">
+										</div>
+										<div class="form-group">
+											<label>工单详情</label>
+											<textarea id="detail" name="detail"  class="form-control" rows="3"></textarea>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button id="cancleButton" type="button" class="btn btn-secondary" data-dismiss="modal">
+										取消
+									</button>
+									<button id="saveInfo" type="button" class="btn btn-primary" data-dismiss="modal">
+										保存
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- add student Modal end -->
+
+					<div class="modal fade" id="addSuccessModal" tabindex="-1" role="dialog" aria-labelledby="addSuccessModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="addSuccessModalLabel">提示信息</h5>
+									<button id="closeAddSuccessModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<i class="fa fa-check-circle" style="color: #34bfa3;" aria-hidden="true"></i> 操作成功！
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal fade" id="handleModal" tabindex="-1" role="dialog" aria-labelledby="handleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="handleModalLabel">确认处理</h5>
+									<button id="closeHandleModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="form-group">
+										<label>费用金额</label>
+										<div class="input-group" style="width: 40%;">
+											<span class="input-group-addon">￥</span>
+											<input id="amount" name="amount" type="text" class="form-control" οnkeyup="value=value.replace(/[^\d]/g,'')" aria-label="请输入金额/元">
+											<span class="input-group-addon">.00</span>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">
+										取消
+									</button>
+									<button id="saveAmount" type="button" class="btn btn-primary" data-dismiss="modal">
+										保存
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+				<!--main contents end-->
+			</div>
+
+			<!-- Content_right_End -->
+			<!-- Footer -->
+			<footer class="footer ptb-20">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="copy_right">
+							<p>
+								2018 © Dashboard Theme By
+								<a href="http://www.17sucai.com/">Jeparo</a>
+							</p>
+						</div>
+						<a id="back-to-top" href="#"> <i class="ion-android-arrow-up"></i> </a>
+					</div>
+				</div>
+			</footer>
+			<!-- Footer_End -->
+		</div>
+		<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+		<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script type="text/javascript" src="/assets/js/jquery.dcjqaccordion.2.7.js"></script>
+		<script src="/assets/js/custom.js" type="text/javascript"></script>
+		<script type="text/javascript" th:inline="javascript">
+            $(document).ready(function() {
+
+                $("#saveInfo").click(function(){
+                    $("#addSuccessModal").modal("show");
+                    $("#teacherId").val($("#userAccount").text());
+                });
+
+                $("#closeButton").click(function(){
+                    $("#addFixOrderModalLabel").text("添加教师");
+                });
+
+                $("#cancleButton").click(function(){
+                    $("#addFixOrderModalLabel").text("添加教师");
+                });
+
+                $("#closeAddSuccessModal").click(function(){
+                    $("#addFixOrderForm").submit();
+                });
+
+                var fixOrderUuid;
+
+                $(".handleFixOrder").click(function(){
+                    fixOrderUuid = $(this).next().val();
+                    $("#handleModal").modal("show");
+				});
+
+                $("#saveAmount").click(function(){
+                    var amount = $("#amount").val();
+                    $.ajax({
+                        type: 'POST',
+                        url: '/fixOrder/deleteOne',
+                        data: {"fixOrderUuid":fixOrderUuid, "amount":amount},
+                        dataType: 'json',
+                        success: function(data){
+                            $("#addSuccessModal").modal("show");
+                        },
+                        error: function(){
+                            alert("error");
+                        }
+                    });
+                });
+            });
+		</script>
+	</body>
+
+</html>

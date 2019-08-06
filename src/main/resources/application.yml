@@ -1,0 +1,17 @@
+#配置数据源，此处不设置type，即为默认选择Hikari
+spring:
+    datasource:
+        name: test
+        url: jdbc:mysql://127.0.0.1:3306/demo
+        username: root
+        password: Root
+        driver-class-name: com.mysql.jdbc.Driver
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+
+#配置mybatis
+mybatis:
+    mapper-locations: classpath:mapping/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+    type-aliases-package: com.example.demo.entity  # 注意：对应实体类的路径

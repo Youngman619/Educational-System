@@ -1,0 +1,510 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Jeparo - Responsive Bootstrap 4 Admin Dashboard</title>
+		<link rel="shortcut icon" type="image/x-icon" href="Vertical/favicon.ico">
+		<!-- google font -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+		<link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="/assets/css/ionicons.css" rel="stylesheet" type="text/css">
+		<link href="/assets/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+		<link href="/assets/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+		<link href="/assets/css/weather-icons.min.css" rel="stylesheet">
+		<!--Morris Chart -->
+		<link rel="stylesheet" href="/assets/js/index/morris-chart/morris.css">
+		<!--fullcalendar-->
+		<link href="/assets/css/fullcalendar.css" rel='stylesheet' />
+		<link href="/assets/css/style.css" rel="stylesheet">
+		<link href="/assets/css/responsive.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<!-- header -->
+			<header class="main-header">
+				<div class="container_header">
+					<div class="logo d-flex align-items-center">
+						<a href="#"> <strong class="logo_icon"> <img src="/assets/images/small-logo.png" alt=""> </strong> <span class="logo-default"> <img src="/assets/images/new-logo.png" alt=""> </span> </a>
+						<div class="icon_menu full_menu">
+							<a href="#" class="menu-toggler sidebar-toggler"></a>
+						</div>
+					</div>
+					<div class="right_detail">
+						<div class="row d-flex align-items-center min-h pos-md-r">
+							<div class="col-xl-5 col-3 search_col ">
+								<div class="top_function">
+
+									<div class="search">
+										<a id="toggle_res_search" data-toggle="collapse" data-target="#search_form" class="res-only-view collapsed" href="javascript:void(0);"
+										aria-expanded="false"> <i class=" icon-magnifier"></i> </a>
+										<form id="search_form" role="search" class="search-form collapse" action="#">
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="站内搜索...">
+												<button type="button" class="btn" data-target="#search_form" data-toggle="collapse" aria-label="Close">
+													<i class="ion-android-search"></i>
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-7 col-9 d-flex justify-content-end">
+								<div class="right_bar_top d-flex align-items-center">
+
+									<!-- notification_Start -->
+									<div class="dropdown dropdown-notification">
+										<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="false"> <i class="fa fa-bell-o"></i> <span class="badge_coun"> 6 </span> </a>
+										<ul class="dropdown-menu scroll_auto height_fixed" aria-labelledby="dropdownMenu1">
+											<li class="bigger">
+												<h3><span class="bold">Notifications</span></h3>
+												<span class="notification-label">New 6</span>
+											</li>
+											<li>
+												<ul class="dropdown-menu-list">
+													<li>
+														<a href="javascript:;"> <span class="time">just now</span> <span class="details"> <span class="notification-icon deepPink-bgcolor"> <i class="fa fa-check"></i> </span> Congratulations!. </span> </a>
+													</li>
+													<li>
+														<a href="javascript:;"> <span class="time">3 mins</span> <span class="details"> <span class="notification-icon purple-bgcolor"> <i class="fa fa-user o"></i> </span> <b>John Micle </b>is now following you. </span> </a>
+													</li>
+													<li>
+														<a href="javascript:;"> <span class="time">7 mins</span> <span class="details"> <span class="notification-icon blue-bgcolor"> <i class="fa fa-comments-o"></i> </span> <b>Sneha Jogi </b>sent you a message. </span> </a>
+													</li>
+													<li>
+														<a href="javascript:;"> <span class="time">12 mins</span> <span class="details"> <span class="notification-icon pink"> <i class="fa fa-heart"></i> </span> <b>Ravi Patel </b>like your photo. </span> </a>
+													</li>
+													<li>
+														<a href="javascript:;"> <span class="time">15 mins</span> <span class="details"> <span class="notification-icon yellow"> <i class="fa fa-warning"></i> </span> Warning! </span> </a>
+													</li>
+													<li>
+														<a href="javascript:;"> <span class="time">10 hrs</span> <span class="details"> <span class="notification-icon red"> <i class="fa fa-times"></i> </span> Application error. </span> </a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+									<!-- notification_End -->
+									<!-- DropDown_Inbox -->
+									<div class="dropdown dropdown-inbox">
+										<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> <i class="fa fa-envelope-o"></i> <span class="badge_coun"> 2 </span> </a>
+										<ul class="dropdown-menu scroll_auto height_fixed" aria-labelledby="dropdownMenu1">
+											<li class="bigger">
+												<h3><span class="bold">Messages</span></h3>
+												<span class="notification-label">New 2</span>
+											</li>
+											<li>
+												<ul class="dropdown-menu-list">
+													<li>
+														<a href="#"> <span class="photo"> <img src="/assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
+													</li>
+													<li>
+														<a href="#"> <span class="photo"> <img src="/assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
+													</li>
+													<li>
+														<a href="#"> <span class="photo"> <img src="/assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
+													</li>
+													<li>
+														<a href="#"> <span class="photo"> <img src="/assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
+													</li>
+													<li>
+														<a href="#"> <span class="photo"> <img src="/assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
+													</li>
+													<li>
+														<a href="#"> <span class="photo"> <img src="/assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+									<!--DropDown_Inbox_End -->
+									<!-- Dropdown_User -->
+									<div class="dropdown dropdown-user">
+										<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="true"> <img class="img-circle pro_pic" src="/assets/images/user1.png" alt=""> </a>
+										<ul class="dropdown-menu dropdown-menu-default">
+											<li>
+												<a href="#"> <i class="icon-user"></i> 个人信息 </a>
+											</li>
+											<li>
+												<a href="#"> <i class="icon-settings"></i> 设置 </a>
+											</li>
+											<li>
+												<a href="#"> <i class="icon-directions"></i> 帮助 </a>
+											</li>
+											<li class="divider"></li>
+											<li>
+												<a href="lock_screen.html"> <i class="icon-lock"></i> 锁定 </a>
+											</li>
+											<li>
+												<a href="#"> <i class="icon-logout"></i> 退出登录 </a>
+											</li>
+										</ul>
+									</div>
+									<!-- Dropdown_User_End -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- header_End -->
+			<!-- Content_right -->
+			<div class="container_full">
+
+				<div class="side_bar scroll_auto">
+					<div class="user-panel">
+						<div class="user_image">
+							<img src="/assets/images/user1.png" class="img-circle mCS_img_loaded" alt="User Image">
+						</div>
+						<div class="info">
+							<p th:text="${Email}"></p>
+							<a href="#"> <i class="fa fa-circle text-success"></i> Online</a>
+						</div>
+					</div>
+
+					<ul id="dc_accordion" class="sidebar-menu tree">
+						<li class="menu_sub">
+							<a href="#"> <i class="fa fa-graduation-cap"></i> <span>教务管理</span> <span class="
+								arrow"></span>
+							</a>
+							<ul class="down_menu">
+								<li>
+									<a href="/consumableOrder/doView">耗材申报单管理</a>
+								</li>
+								<li>
+									<a href="echart.html">人员信息管理</a>
+								</li>
+								<li>
+									<a href="/fixOrder/doView">基础设施报修</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu_sub">
+							<a href="#"> <i class="fa fa-graduation-cap"></i> <span>考勤管理</span> <span class="
+								arrow"></span>
+							</a>
+							<ul class="down_menu">
+								<li>
+									<a href="/consumableOrder/doView">教师考勤</a>
+								</li>
+								<li>8
+									<a href="echart.html">学员考勤</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu_sub">
+							<a href="/teacher/doView"> <i class="fa fa-user-secret"></i> <span>教师管理</span></a>
+						</li>
+
+						<li class="menu_sub">
+							<a href="/student/doView"> <i class="fa fa-users"></i> <span>学员管理</span></a>
+						</li>
+
+						<li class="menu_sub">
+							<a href="/lesson/doView"> <i class="fa fa-calendar"></i> <span>课程管理</span></a>
+						</li>
+
+						<li class="menu_sub">
+							<a href="#"> <i class="fa fa-cny"></i> <span>财务管理</span> <span class="arrow"></span> </a>
+							<ul class="down_menu">
+								<li>
+									<a href="flot-chart.html">订单管理</a>
+								</li>
+								<li>
+									<a href="echart.html">财务报表</a>
+								</li>
+								<li>
+									<a href="morris-chart.html">人员工资单</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<div class="content_wrapper">
+					<div class="container-fluid">
+						<!-- breadcrumb -->
+						<div class="page-heading">
+							<div class="row d-flex align-items-center">
+								<div class="col-md-6">
+									<div class="page-breadcrumb">
+										<h1>数据概览</h1>
+									</div>
+								</div>
+								<div class="col-md-6 justify-content-md-end d-md-flex">
+									<div class="breadcrumb_nav">
+										<ol class="breadcrumb">
+											<li>
+												<i class="fa fa-home"></i>
+												<a class="parent-item" href="index.html">主页</a>
+												<i class="fa fa-angle-right"></i>
+											</li>
+											<li class="active">
+												数据概览
+											</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- breadcrumb_End -->
+
+						<!-- Section -->
+						<section class="chart_section">
+							<div class="row">
+								<div class="col-xl-3 col-sm-6 mb-4">
+									<div class="card border-0 text-light">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-12">
+													<div class="homepage_single">
+														<span class="sec_icon"><i class="fa fa-dollar" aria-hidden="true"></i></span>
+														<div class="homepage_fl_right">
+															<h4 class="mt-0">收入金额</h4>
+															<h3>$30, <span class="single-count">305</span></h3>
+														</div>
+														<p>
+															当前月总收入 <span class="fl_right text-success">GOOD <i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-xl-3 col-md-6 mb-4">
+									<div class="card border-0 text-light">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-12">
+													<div class="homepage_single">
+														<span class="sec_icon"><i class="fa fa-group" aria-hidden="true"></i></span>
+														<div class="homepage_fl_right">
+															<h4 class="mt-0">学员数量</h4>
+															<h3>75, <span class="single-count">843</span></h3>
+														</div>
+														<p>
+															当前总学员数量 <span class="fl_right text-danger">Normal <i class="fa fa-long-arrow-down" aria-hidden="true"></i></span>
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-xl-3 col-sm-6 mb-4">
+									<div class="card border-0 text-light">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-12">
+													<div class="homepage_single">
+														<span class="sec_icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+														<div class="homepage_fl_right">
+															<h4 class="mt-0">消息</h4>
+															<h3><span class="single-count">1228</span></h3>
+														</div>
+														<p>
+															最新消息 <span class="fl_right text-danger">Normal <i class="fa fa-long-arrow-down" aria-hidden="true"></i></span>
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-xl-3 col-sm-6 mb-4">
+									<div class="card border-0 text-light">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-12">
+													<div class="homepage_single">
+														<span class="sec_icon"><i class="fa fa-heart" aria-hidden="true"></i></span>
+														<div class="homepage_fl_right">
+															<h4 class="mt-0">好评反馈</h4>
+															<h3><span class="single-count">+1234K</span></h3>
+														</div>
+														<p>
+															更新至当前 <span class="fl_right text-success">Update <i class="fa fa-refresh" aria-hidden="true"></i></span>
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<div class="container-fluid">
+							<!-- state start-->
+							<div class="row">
+								<div class="col-md-12">
+									<div class="card card-shadow mb-4">
+										<div class="card-header">
+											<div class="card-title">
+												课程表
+											</div>
+										</div>
+										<div class="card-body">
+											<div id='calendar'></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- state end-->
+						</div>
+
+						<!-- add student Modal start -->
+						<div class="modal fade" id="addScheduleModal" tabindex="-1" role="dialog" aria-labelledby="addScheduleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="addScheduleModalLabel">排课</h5>
+										<button id="closeButton" type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<form th:action="@{/schedule/addOrUpdate}" method="post" id="addScheduleForm">
+											<input id="currentDate" name="currentDate" type="text" style="display: none;">
+											<div class="form-group">
+												<label>课程选择</label>
+												<br/>
+												<select class="required form-control" id="lessonUuid" name="lessonUuid">
+													<option th:each="m:${lessonList}" th:text="${m.lessonname}" th:value="${m.uuid}"></option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label>上课时间</label>
+												<br/>
+												<input class="required" type="time" id="startTime" name="startTime" pattern="HH:mm:ss"
+													   style="-webkit-appearance: menulist; border: 1px solid #ccc; border-radius: 4px; color: #878787;"/>
+											</div>
+											<div class="form-group">
+												<label>下课时间</label>
+												<br/>
+												<input class="required" type="time" id="endTime" name="endTime" pattern="HH:mm:ss"
+													   style="-webkit-appearance: menulist; border: 1px solid #ccc; border-radius: 4px; color: #878787;"/>
+											</div>
+											<div class="form-group">
+												<label>授课教师</label>
+												<br/>
+												<select class="required form-control" id="teacherUuid" name="teacherUuid">
+													<option th:each="n:${teacherList}" th:text="${n.person.personname}" th:value="${n.uuid}"></option>
+												</select>
+											</div>
+										</form>
+									</div>
+									<div class="modal-footer">
+										<button id="deleteInfo" type="button" class="btn btn-danger" data-dismiss="modal">
+											删除
+										</button>
+										<button id="cancleButton" type="button" class="btn btn-secondary" data-dismiss="modal">
+											取消
+										</button>
+										<button id="saveInfo" type="button" class="btn btn-primary" data-dismiss="modal">
+											保存
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- add student Modal end -->
+						<div class="modal fade" id="addSuccessModal" tabindex="-1" role="dialog" aria-labelledby="addSuccessModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="addSuccessModalLabel">提示信息</h5>
+										<button id="closeAddSuccessModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<i class="fa fa-check-circle" style="color: #34bfa3;" aria-hidden="true"></i> 操作成功！
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Content_right_End -->
+			<!-- Footer -->
+			<footer class="footer ptb-20">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="copy_right">
+							<p>
+								2018 © Dashboard Theme By
+								<a href="http://www.17sucai.com/">Jeparo</a>
+							</p>
+						</div>
+						<a id="back-to-top" href="#"> <i class="ion-android-arrow-up"></i> </a>
+					</div>
+				</div>
+			</footer>
+			<!-- Footer_End -->
+		</div>
+		<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+		<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+		<!--vectormap-->
+		<script src="/assets/js/index/jquery-jvectormap-1.2.2.min.js"></script>
+		<script src="/assets/js/index/jquery-jvectormap-world-mill-en.js"></script>
+		<script src="/assets/js/index/vmap-init.js"></script>
+		<!--Morris Chart-->
+		<script src="/assets/js/index/morris-chart/morris.js"></script>
+		<script src="/assets/js/index/morris-chart/raphael-min.js"></script>
+		<!--morris chart initialization-->
+		<script src="/assets/js/index/morris-chart/morris-init.js"></script>
+		<!-- chart js -->
+		<script src="/assets/js/index/Chart.bundle.js"></script>
+		<script src="/assets/js/index/utils.js"></script>
+
+		<script src="/assets/js/index/chart.js"></script>
+
+		<!--fullcalender-->
+		<script src="/assets/js/moment.min.js"></script>
+		<script src="/assets/js/fullcalendar.js"></script>
+		<!--calendar init-->
+		<script src="/assets/js/calendar-basic-init.js"></script>
+
+		<script type="text/javascript" src="/assets/js/jquery.dcjqaccordion.2.7.js"></script>
+		<script src="/assets/js/custom.js" type="text/javascript"></script>
+		<script type="text/javascript" th:inline="javascript">
+            $(document).ready(function() {
+                $("#deleteInfo").hide();
+
+                $("#saveInfo").click(function(){
+                    $("#addSuccessModal").modal("show");
+                });
+
+                $("#closeButton").click(function(){
+                    $("#deleteInfo").hide();
+                    $("#addScheduleModalLabel").text("排课");
+                    $("#addScheduleForm")[0].reset();
+                });
+
+                $("#cancleButton").click(function(){
+                    $("#deleteInfo").hide();
+                    $("#addScheduleModalLabel").text("排课");
+                    $("#addScheduleForm")[0].reset();
+                });
+
+                $("#closeAddSuccessModal").click(function(){
+                    $("#addScheduleForm").submit();
+                });
+			});
+		</script>
+		</body>
+</html>
